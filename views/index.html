@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+    <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-xs-12">
+                    <h1 class="title">武汉蚁图时空科技有限公司</h1>
+                </div>
+            </div>
+            <div class="row clearFloat">
+                <div class="info">
+                    <span class="col-sm-12">如在注册时遇到问题</span>
+                    <span class="col-sm-12">
+                        请拨打服务热线
+                        <img class="phoneicon" src="/images/index/phone.png">
+                        027-87003601
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="input-filed">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-xs-12 col-sm-offset-2">
+                    <div class="content">
+                        <div class="hidden-xs input-group-img">
+                            <img class="img-responsive"  src="/images/index/logo.png" />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="txtInput" class="form-control" placeholder="用户码" autofocus="autofocus" value=""/>
+                            <div id="into" title="进入"  class="input-group-addon">
+                                <span class="glyphicon glyphicon-log-in" style="font-size: 28px;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2018-2019 武汉蚁图时空科技有限公司版权所有</p>
+        <div></div>
+    </footer>
+    {{> script}}
+    <script>
+        $(function () {
+            $("#into").click(function(){
+                into();
+            });
+            function into() {
+                var key = $("#txtInput").val().trim();
+                if (key) {
+                    $.post("index/into", "code=" + key, function (res) {
+                        if (res.success) {
+                            window.location.href = "oper/registerlist";
+                        } else {
+                            layer.alert(res.message);
+                            $("#txtInput").val("");
+                        }
+                    }, "json");
+                }
+            }
+        });
+    </script>
+</body>
+</html>

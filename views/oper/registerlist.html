@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+</head>
+<body>
+    客户
+    <button id="quite" class="btn btn-denger" type="button">退出</button>
+    {{> script}}
+    <script type="text/javascript">
+        $(function(){
+            $("#quite").click(function(){
+                $.post("/index/quite",res=>{
+                    if(res.success){
+                        location.replace("/");
+                    }else{
+                        layer.alert(res.message);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

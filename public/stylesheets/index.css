@@ -1,0 +1,131 @@
+.header{
+    padding-top:80px;
+    padding-bottom:50px;
+    background-image: url(/images/index/header.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    color:#fff;
+}
+.header .title{
+    font-weight: bold;
+    text-shadow: #000 5px 2px 8px;
+}
+@media (max-width: 486px){
+    .header .title{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 486px){
+    .header .title {
+        font-size: 30px;
+    }
+}
+@media (min-width: 768px){
+    .header .title {
+        font-size: 36px;
+    }
+}
+@media (min-width: 992px){
+    .header .title {
+        font-size: 45px;
+    }
+}
+.header .info{
+    float:right;
+}
+@media (max-width: 400px){
+    .header .info {
+        float: none;
+        text-align: center;
+    }
+}
+@media (max-width: 400px){
+    .header .info>span {
+        display: block;
+    }
+}
+.header .phoneicon {
+    width: 22px;
+}
+@media (max-width: 486px){
+    .header .phoneicon {
+        width: 14px;
+    }
+}
+@media (min-width: 486px){
+    .header .phoneicon {
+        width: 16px;
+    }
+}
+@media (min-width: 768px){
+    .header .phoneicon {
+        width: 18px;
+    }
+}
+@media (min-width: 992px){
+    .header .phoneicon{
+        width: 20px;
+    }
+}
+.input-filed{
+    padding-top:120px;
+    padding-bottom: 70px;
+}
+.input-filed .content>div{
+    float:left;
+}
+.input-filed .content>.input-group-img {
+    width: 10%;
+}
+.input-filed .content>.input-group{
+    width:90%;
+}
+.content .input-group>input{
+    height:42px;
+}
+.content .input-group>.input-group-addon{
+    width: 15%;
+    color: #fff;
+    background-color: #3385ff;
+    cursor: pointer;
+}
+footer>p,footer>div{
+    position:absolute;
+    z-index: -1;
+}
+footer>p{
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    text-align: center;
+}
+footer>div{
+    height: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images/index/footer.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+}
+@media (max-width: 486px){
+    footer>p{
+        font-size: 12px;
+    }
+}
+@media (min-width: 486px){
+    footer>p{
+        font-size: 14px;
+    }
+}
+@media (min-width: 768px){
+    footer>p{
+        font-size: 16px;
+    }
+}
+
